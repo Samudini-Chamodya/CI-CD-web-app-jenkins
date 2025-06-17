@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - echo Build started on `date`
+      
+  build:
+    commands:
+      - echo Build phase started on `date`
+      - echo "Building the web application..."
+      # Add any build commands here (e.g., npm install, npm run build)
+      # For static files, we just copy them
+      
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo "Preparing files for deployment..."
+
+artifacts:
+  files:
+    - '**/*'
+  name: my-web-app-$(date +%Y-%m-%d-%H-%M-%S)
+  
+cache:
+  paths:
+    - '/root/.npm/**/*'
