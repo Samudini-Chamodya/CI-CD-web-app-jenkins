@@ -50,6 +50,7 @@ The main focus is on setting up a Jenkins Pipeline to manage the CI/CD process e
    - Choose `t2.micro` (free tier eligible).
    - Create or use an existing key pair (e.g., `node-key.pem`).
    - Configure the security group to allow:
+         
             - SSH (22): Your IP or 0.0.0.0/0
             - HTTP (80): 0.0.0.0/0
             - HTTPS (443): 0.0.0.0/0
