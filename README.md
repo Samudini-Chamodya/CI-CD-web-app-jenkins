@@ -41,7 +41,7 @@ The main focus is on setting up a Jenkins Pipeline to manage the CI/CD process e
    ```bash
    npm install
    npm test
-
+  
 
 ### Launch EC2 Instance
 1. Log in to the AWS Management Console and navigate to EC2.
