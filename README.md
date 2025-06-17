@@ -23,7 +23,7 @@ The CI/CD-web-app is a basic Node.js application that serves a web page. This pr
 - Pulling code from this GitHub repository.
 - Installing dependencies with `npm install`.
 - Running tests with `npm test`.
-- (Optional) Deploying the application to a server.
+- Deploying the application to a server.
 
 The main focus is on setting up a Jenkins Pipeline to manage the CI/CD process efficiently.
 
@@ -43,7 +43,7 @@ The main focus is on setting up a Jenkins Pipeline to manage the CI/CD process e
   
    npm install
    npm test
-   ```
+
 
 ### Launch EC2 Instance
 1. Log in to the AWS Management Console and navigate to EC2.
@@ -84,7 +84,7 @@ The main focus is on setting up a Jenkins Pipeline to manage the CI/CD process e
 5. Start and enable Jenkins:
      sudo systemctl start jenkins
      sudo systemctl enable jenkins
-   ```
+   
 6. Access Jenkins:
    - Open `http://<EC2-Public-IP>:8080` in your browser.
    - Retrieve the initial admin password:
@@ -284,19 +284,19 @@ The `Jenkinsfile` defines the CI/CD pipeline. Place this file in the root of you
 
 
 - **EC2 Instance Launch**  
-  ![EC2 Instance Launch](screenshots/ec2.png) 
+  ![EC2 Instance Launch](Screenshots/ec2.png) 
 
 - **Jenkins Installation**  
-  ![Jenkins Installation](screenshots/jenkins_dashboard.png)
+  ![Jenkins Installation](Screenshots/jenkins_dashboard.png)
 
 - **Pipeline Build**  
-  ![Pipeline build dashboard](screenshots/build_dashboard.png)
+  ![Pipeline build dashboard](Screenshots/build_dashboard.png)
 
 - **Successful Build**  
-  ![Before Changes](screenshots/before_changes.png)
+  ![Before Changes](Screenshots/before_changes.png)
 
 - **Successful Output After chages**  
-  ![Auto build and deploy](screenshots/After_changes.png)
+  ![Auto build and deploy](Screenshots/After_changes.png)
 
 
 
