@@ -104,7 +104,7 @@ The main focus is on setting up a Jenkins Pipeline to manage the CI/CD process e
      - **Definition**: Select **Pipeline script from SCM**.
      - **SCM**: Choose **Git**.
      - **Repository URL**: Enter `https://github.com/Samudini-Chamodya/CI-CD-web-app-jenkins.git`.
-     - **Script Path**: Enter `Jenkinsfile`.
+     - **Script Path**: Enter `Jenkinsfile`.  Scroll to Pipeline script and paste the above Jenkinsfile code.
    - **Build Triggers**: Enable **Poll SCM** with a schedule (e.g., `H/5 * * * *` for every 5 minutes).
 5. Save the configuration.
 
@@ -294,9 +294,14 @@ The `Jenkinsfile` defines the CI/CD pipeline. Place this file in the root of you
 - **Successful Build**  
   ![Before Changes](Screenshots/before_changes.png)
 
-- **Successful Output After chages**  
-  ![Auto build and deploy](Screenshots/after_changes.png)
+ - **Push Changes to GitHub**  
+  ![push chages to github](Screenshots/vscode.png)
 
+- **Automatically Triggered Builds After Code Changes**  
+  ![Automatically Triggered Builds After Code Changes ](Screenshots/automatic_trigger.png)
+
+- **Auto-triggered Jenkins Build After Code Push**  
+  ![Auto build and deploy](Screenshots/after_changes.png)
 
 
 ## Troubleshooting
