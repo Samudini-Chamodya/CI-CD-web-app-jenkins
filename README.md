@@ -15,8 +15,6 @@ This repository contains a simple Node.js web application designed to demonstrat
 - [Verifying the CI/CD Flow](#verifying-the-cicd-flow)
 - [Screenshots](#screenshots)
 - [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 The CI/CD-web-app is a basic Node.js application that serves a web page. This project uses Jenkins to automate the following:
@@ -40,7 +38,7 @@ The main focus is on setting up a Jenkins Pipeline to manage the CI/CD process e
  Visit [https://github.com/Samudini-Chamodya/CI-CD-web-app-jenkins](https://github.com/Samudini-Chamodya/CI-CD-web-app-jenkins).
 
 4. Install dependencies locally to verify the setup:
-  
+   ```bash
    npm install
    npm test
 
@@ -62,19 +60,19 @@ The main focus is on setting up a Jenkins Pipeline to manage the CI/CD process e
 
 ### Install Jenkins
 1. SSH into the EC2 instance:
-  
+   ```bash
    ssh -i my-key-pair.pem ec2-user@<EC2-Public-IP>
   
 2. Update the system:
-
+    ```bash
    sudo apt-get update -y  # For Ubuntu
   
 3. Install Java (required for Jenkins):
-  
+     ```bash
    sudo apt-get install openjdk-11-jdk -y  # For Ubuntu
    
 4. Install Jenkins:
-  
+    ```bash
    - For Ubuntu:
      curl -fsSL https://pkg.jenkins.io/debian/jenkins.io.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
      echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
@@ -82,13 +80,14 @@ The main focus is on setting up a Jenkins Pipeline to manage the CI/CD process e
      sudo apt-get install jenkins -y
     
 5. Start and enable Jenkins:
+   ```bash
      sudo systemctl start jenkins
      sudo systemctl enable jenkins
    
 6. Access Jenkins:
    - Open `http://<EC2-Public-IP>:8080` in your browser.
    - Retrieve the initial admin password:
-   
+     ```bash
      sudo cat /var/lib/jenkins/secrets/initialAdminPassword
      
    - Follow the setup wizard to install plugins and create an admin user.
@@ -296,7 +295,7 @@ The `Jenkinsfile` defines the CI/CD pipeline. Place this file in the root of you
   ![Before Changes](Screenshots/before_changes.png)
 
 - **Successful Output After chages**  
-  ![Auto build and deploy](Screenshots/After_changes.png)
+  ![Auto build and deploy](Screenshots/after_changes.png)
 
 
 
